@@ -23,9 +23,9 @@ export default function App() {
     shoeName: '',
     brand: '',
     size: '',
-    gender: '',
+    gender: 'Men',
     color: '',
-    shelf: '',
+    shelf: ''
   });
   const [formError, setFormError] = useState('');
 
@@ -66,7 +66,7 @@ export default function App() {
     };
 
     setInventory((prev) => [...prev, newEntry]);
-    setForm({ shoeName: '', brand: '', size: '', gender: '', color: '', shelf: '' });
+    setForm({ shoeName: '', brand: '', size: '', gender: 'Men', color: '', shelf: '' });
     showNotification(`"${newEntry.shoeName}" added to Shelf ${shelfNum}`);
   };
 
@@ -181,11 +181,8 @@ export default function App() {
                 <div className="form-group">
                   <label>Gender</label>
                   <select name="gender" value={form.gender} onChange={handleFormChange}>
-                    <option value="">— Select —</option>
                     <option value="Men">Men</option>
                     <option value="Women">Women</option>
-                    <option value="Kids">Kids</option>
-                    <option value="Unisex">Unisex</option>
                   </select>
                 </div>
                 <div className="form-group">
