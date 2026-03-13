@@ -22,7 +22,7 @@ export default function App() {
   const [form, setForm] = useState({
     shoeName: '',
     brand: '',
-    size: '',
+    size: '6-13',
     gender: 'Men',
     color: '',
     shelf: ''
@@ -66,7 +66,7 @@ export default function App() {
     };
 
     setInventory((prev) => [...prev, newEntry]);
-    setForm({ shoeName: '', brand: '', size: '', gender: 'Men', color: '', shelf: '' });
+    setForm({ shoeName: '', brand: '', size: '6-13', gender: 'Men', color: '', shelf: '' });
     showNotification(`"${newEntry.shoeName}" added to Shelf ${shelfNum}`);
   };
 
@@ -169,7 +169,7 @@ export default function App() {
 
               <div className="form-row">
                 <div className="form-group">
-                  <label>Size (AU)</label>
+                  <label>Size (AU/UK)</label>
                   <input
                     type="text"
                     name="size"
